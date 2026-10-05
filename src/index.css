@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-m2-gold: #e5b95f;
+    --color-m2-gold-dark: #b88628;
+    --color-m2-crimson: #c82333;
+    --color-m2-dark: #0f1117;
+    --color-m2-surface: #171b26;
+    --color-m2-border: #283046;
+  }
+
+  body {
+    background-color: #0b0d13;
+    color: #d1d5db;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-metin {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Leaflet dark custom styles */
+.leaflet-container {
+  background-color: #0d1117 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  outline: none;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #161b26 !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #374151 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.7) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #161b26 !important;
+  border-left: 1px solid #374151 !important;
+  border-top: 1px solid #374151 !important;
+}
+
+/* Boss popup flip when near top of screen - places popup smoothly below the marker without panning */
+.leaflet-popup.popup-placement-below {
+  bottom: auto !important;
+  top: 30px !important;
+  margin-bottom: 0 !important;
+}
+
+.leaflet-popup.popup-placement-below .leaflet-popup-tip-container {
+  top: -10px !important;
+  bottom: auto !important;
+  transform: rotate(180deg) !important;
+}
+
+.metin2-boss-popup .leaflet-popup-content-wrapper {
+  max-width: min(340px, calc(100vw - 32px)) !important;
+}
+
+.leaflet-control-zoom {
+  border: 1px solid #2d3748 !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+/* Ensure Leaflet stays strictly contained in its own stacking context below modal dialogs */
+.leaflet-container {
+  isolation: isolate;
+  z-index: 1 !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: #1a202c !important;
+  color: #e2e8f0 !important;
+  border-bottom: 1px solid #2d3748 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #2d3748 !important;
+  color: #fbbf24 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3447;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e4d69;
+}

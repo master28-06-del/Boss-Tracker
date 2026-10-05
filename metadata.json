@@ -1,0 +1,6 @@
+{
+  "name": "Metin2 Boss Tracker",
+  "description": "Real-time Metin2 boss cooldown and respawn tracker across channels CH1–CH6 with interactive Leaflet map, coordinates grid, and admin controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
